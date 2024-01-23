@@ -19,6 +19,4 @@ const fixedImages = images.map(
   (photo) => `<li><img src=${photo.url} alt="${photo.alt}"></img></li>`
 );
 
-console.log(fixedImages);
-
 gallery.insertAdjacentHTML("afterbegin", fixedImages);
