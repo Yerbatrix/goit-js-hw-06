@@ -15,17 +15,10 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-function addPictures() {
-  images.forEach((image) => {
-    const liPicture = document.createElement("li");
+const fixedImages = images.map(
+  (photo) => `<li><img src=${photo.url} alt="${photo.alt}"></img></li>`
+);
 
-    liPicture.insertAdjacentHTML(
-      "afterbegin",
-      `<img src=${image.url} alt="${image.alt}"></img>`
-    );
+console.log(fixedImages);
 
-    gallery.append(liPicture);
-  });
-}
-
-addPictures();
+gallery.insertAdjacentHTML("afterbegin", fixedImages);
