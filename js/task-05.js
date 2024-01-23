@@ -4,7 +4,7 @@ const output = document.querySelector("#name-output");
 input.addEventListener("input", changeName);
 
 function changeName() {
-  if (input.value === "") {
+  if (input.value.trim() === "") {
     output.textContent = "Anonymous";
   } else {
     const inputName = input.value;
