@@ -12,7 +12,14 @@ function handleSubmit(event) {
     return alert("Proszę wypełnić wszystkie pola!");
   }
 
-  console.log(`Login: ${email}`);
-  console.log(`Password: ${password}`);
+  const user = {
+    email: email,
+    password: password,
+  };
+
+  console.log(user);
+
+  // console.log(`Login: ${email}`);
+  // console.log(`Password: ${password}`);
   form.reset();
 }
